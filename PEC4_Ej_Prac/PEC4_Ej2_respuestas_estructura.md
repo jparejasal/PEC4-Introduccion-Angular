@@ -76,11 +76,11 @@
     }
 
 
-    3. ¿Es posible poder inyectar el template y los estilos en línea de un componente sin necesidad de especificarlos en templateUrl, styleUrls? ¿Es recomendable hacer esto?
-    Técnicamente es posible, pero en mi opinión no es para nada recomendable, por tres razones:
+3. ¿Es posible poder inyectar el template y los estilos en línea de un componente sin necesidad de especificarlos en templateUrl, styleUrls? ¿Es recomendable hacer esto?
+Técnicamente es posible, pero en mi opinión no es para nada recomendable, por tres razones:
     A. En la mayoría de aplicaciones contemporáneas, tanto los template HTML como los estilos CSS requieren de abundantes y nutridas líneas de código, lo cual conlleva a un efecto negativo si se decide inyectar directamente, lo que a su vez incrementaría la complejidad del archivo components.ts y dificultaría su manejo, además, atenta contra el estándar y paradigma de distribución funcional de código, que hace posible la interoperabilidad entre componentes de la aplicación.
 
     B. Una de las características ideales de una aplicación tecnológica es que sea escalable en el tiempo, lo que implica una evolución significativa sin mayor impacto en su código; ahora bien, lo anterior no es posible si no se cuenta con un código interoperativo y distribuído de manera organizada y funcional, un contraejemplo claro de ello sería la "inyección directa de template y estilos en línea" planteados en el presente interrogante, dado que el código variaría directamente en el archivo component.ts y no en otro archivo aparte (como es ideal que suceda.).
 
     C. Si se requirieran varias presentaciones template y de estilos, el código incrustado solo agravaría la situación, pues se requerirían multiples inyecciones de templates y estilos de linea, lo cual afectaría de forma negativa el eaquema de distribución uniforme de código (import, export, herencia, etc..) por toda la aplicación. Lo ideal y correcto es referenciar archivos terceros que contengan los template y estilos requeridos pora el componente en uso.
-
+    
