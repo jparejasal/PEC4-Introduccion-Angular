@@ -10,9 +10,12 @@
   "files": [
     "src/main.ts",
     "src/main.server.ts",
+    "src/app/model/article.ts",
+    "src/app/articles/article-item/article-item.component.ts",
+    "src/app/articles/article-list/article-list.component.ts",
     "server.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts"    
   ]
 }
